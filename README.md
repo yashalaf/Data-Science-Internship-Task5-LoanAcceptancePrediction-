@@ -21,7 +21,19 @@ personal-loan-acceptance-prediction/
 ├── bank.csv                             # Dataset (UCI Bank Marketing Repository)
 ├── README.md                            # Project overview (this file)
 └── Images/
-├── ├── ├── ├── ├── ├── ├── ├── ├── ├── ├── ├── ├── ├── ├── ├──
+           ├── plot_target_dist.png             # Target variable distribution
+           ├── plot_age_dist.png                # Age distribution by deposit outcome
+           ├── plot_age_group.png               # Acceptance rate by age group
+           ├── plot_job.png                     # Job type vs deposit acceptance
+           ├── plot_marital_edu.png             # Marital status and education analysis
+           ├── plot_balance.png                 # Bank balance distribution
+           ├── plot_corr.png                    # Correlation heatmap
+           ├── plot_campaign.png                # Campaign contacts analysis
+           ├── plot_confusion.png               # Confusion matrices (both models)
+           ├── plot_roc.png                     # ROC curve comparison
+           ├── plot_feat_importance.png         # Decision Tree feature importance
+           ├── plot_segments.png                # Top customer segments
+           └── plot_tree.png                    # Decision Tree visualisation
 ```
 
 ---
@@ -66,6 +78,33 @@ Performed 9 visualisations to understand patterns before modelling:
 | Campaign Contacts | Acceptance drops sharply after 3 contacts, over-calling hurts conversion |
 | Previous Outcome | Prior campaign `success` leads to 60%+ acceptance rate |
 
+### 1. Target Variable Distribution
+![Target Distribution](Images/plot_target_dist.png)
+
+### 2. Age Distribution by Deposit Outcome
+![Age Distribution](Images/plot_age_dist.png)
+
+### 3. Acceptance Rate by Age Group
+![Age Group](Images/plot_age_group.png)
+
+### 4. Job Type vs Deposit Acceptance
+![Job Type](Images/plot_job.png)
+
+### 5. Marital Status and Education Level
+![Marital and Education](Images/plot_marital_edu.png)
+
+### 6. Bank Balance Distribution
+![Balance](Images/plot_balance.png)
+
+### 7. Correlation Heatmap
+![Correlation Heatmap](Images/plot_corr.png)
+
+### 8. Campaign Contacts and Previous Outcome
+![Campaign](Images/plot_campaign.png)
+
+### 9. Customer Segment Analysis
+![Segments](Images/plot_segments.png)
+
 ### 3. Model Training
 Both models were trained on an **80/20 stratified train-test split**:
 
@@ -89,6 +128,17 @@ Models were evaluated using: Accuracy, Precision, Recall, F1-Score, ROC-AUC, Con
 
 - The **Decision Tree** achieved slightly higher accuracy and is more interpretable for business stakeholders
 - **Logistic Regression** produced smoother probability estimates (higher ROC-AUC), making it better for risk scoring
+### 10. Confusion matrices (both models)
+![Confusion](Images/plot_confusion.png)
+
+### 11. ROC curve comparison
+![ROC](Images/plot_roc.png)
+
+### 12. Decision Tree feature importance
+![Feature importance](Images/plot_feat_importance.png)
+
+### 13. Decision Tree Visualization
+![Decision Tree](Images/plot_tree.png)
 
 ### 🏆 Top Predictors (Decision Tree Feature Importance)
 1. **`duration:`** Call length is the single most powerful predictor
@@ -113,7 +163,7 @@ Models were evaluated using: Accuracy, Precision, Recall, F1-Score, ROC-AUC, Con
 
 6. **Higher-balance customers:** are better prospects, they have financial capacity and are more interested in savings/investment products.
 
-7. **Single customers:** show slightly higher acceptance than married or divorced possible indicator of greater financial flexibility.
+7. **Single customers:** show slightly higher acceptance than married or divorced, a possible indicator of greater financial flexibility.
 
 ---
 
